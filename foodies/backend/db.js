@@ -11,8 +11,12 @@ const connectDB = async () => {
         console.log('MongoDB connected successfully');
 
         const fetched_data = await mongoose.connection.db.collection('food-item');
-        const data = await fetched_data.find({}).toArray();
-        console.log();//not looging anything
+        const data = await fetched_data.find({}).toArray(function(err, data){
+            if(err)console.log(err);
+            else{
+                global.food-item == data;
+            }
+        });
     } catch (error) {
         console.error('MongoDB connection failed:', error.message);
         process.exit(1); // Exit process with failure

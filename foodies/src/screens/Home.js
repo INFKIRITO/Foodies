@@ -10,10 +10,10 @@ export default function () {
       <div><Navbar /> </div>
       <div><Carousal /></div>
         <div className='m-3'> 
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
         </div>
       <div><Footer /></div>
     </div>
